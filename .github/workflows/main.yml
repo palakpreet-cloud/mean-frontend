@@ -21,6 +21,8 @@ jobs:
 
           script: |
             cd /home/ubuntu/mean-frontend
+            docker stop frontend || true
+            docker rm frontend || true
             docker build -t frontend .
-            docker run -d -p 4200:4200 frontend
+            docker run -d -p 4200:4200 --name frontend frontend
           
