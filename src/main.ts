@@ -6,11 +6,11 @@ import { environment } from './environments/environment';
 
 
 export function getBaseUrl(){
-  return "http://13.203.231.44/api"
+  return "https://meanback.karan.ksesystem.com/api"
 }
 
 export function getBaseUrlImage(){
-  return "http://13.203.231.44/"
+  return "https://meanback.karan.ksesystem.com/"
 }
 
 const providers = [
