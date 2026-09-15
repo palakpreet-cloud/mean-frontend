@@ -14,6 +14,14 @@ pipeline{
                 sh 'docker build -t frontend .'
             }
         }
+        stage('handling'){
+            steps{
+                sh '''
+                docker stop frontend || true
+                docker rm frontend || true
+                '''
+            }
+        }
         stage('start'){
             steps{
                 sh 'docker run -d -p 4200:4200 --name frontend frontend'
